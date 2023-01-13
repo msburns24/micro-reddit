@@ -1,0 +1,8 @@
+class User < ApplicationRecord
+  has_many :posts
+  has_many :comments
+
+  validates :username, presence: true, length: { in: 1..15 }
+  validates :name, presence: true, length: { in: 1..30 }
+
+end
